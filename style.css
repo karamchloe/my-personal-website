@@ -1,22 +1,95 @@
-body {
-    background: rgb(238, 167, 219);
+.bColor {
+    background: rgba(142, 171, 119, 0.677);
     font-family: Andale Mono, monospace;
     text-align: center;
-}
+}  /*  // doens't work as a class */ 
 
  .image img {
     max-width: 100%;
     height: auto;
     text-align: right; 
-
 } 
 
-.container {
-    display: flex;
-    justify-content: space-between;
+.overlaycontainer{
+    position: relative;
+    display: inline-block;
+}
+.overlay-text {
+    font-family: Andale Mono, monospace;
+    font-size: 2em; /* Set the font size relative to the image size */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(255, 255, 255, 0.6);
+    /* -webkit-text-stroke: 0.1em rgba(147, 210, 138, 0.2); */
 }
 
+.imageSize {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+   /* background-color: rgb(238, 167, 219); /* updates bColor of the div section it's done within the container. Not as a separate class of a background
+*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* ! THIS aligns the text at the center vertically */
+}
+.text {
+    font-size: 2vw; /* !! 2% of the viewport width  !! */
+    text-align: right;
+   
+    
+}
+
+.mainText {
+    text-indent: 30px;
+    font-size: 2vw;
+    font-family: Courier New, monospace;
+    text-align: left;
+    line-height: 1.5;
+    color: white;
+}
+
+p {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.my-div .my-paragraph {
+    margin-top: 2em;
+}
+
+.image, .text{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+    /* border: 2px solid #000; */
+    margin: 0 auto; /* center the text and image within the container */
+   /* vertical-align: middle; */
+}
  /* img {
     max-width: 100%;
     height: auto;
 } */
+
+.external-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #85fa816e;
+    color: #ffffffe6;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.bottom-text {
+    font-family: Andale Mono, monospace;
+    text-align: center;
+    color: white;
+    
+}
