@@ -91,5 +91,36 @@ p {
     font-family: Andale Mono, monospace;
     text-align: center;
     color: white;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rainbow-border {
+    position: relative;
+    display: inline-block;
+}
+
+.rainbow-border img {
+    display: block;
+    border-radius: 10px; 
+}
+
+.rainbow-border::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px; 
+    right: -6px; 
+    bottom: -6px; 
+    z-index: -1;
+    border: 6px solid;
+    border-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    border-image-slice: 1;
+    border-radius: 16px; 
+}
+
+.link-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
